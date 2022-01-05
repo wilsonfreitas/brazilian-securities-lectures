@@ -1,10 +1,10 @@
 import re
 import requests
 import datetime
+from datetime import timedelta
 import lxml.html
 import pandas as pd
 import numpy as np
-import bizdays
 from bcb import sgs
 
 
@@ -226,8 +226,6 @@ def build_ind_futures(df, **kwargs):
     df['Maturity'] = pd.to_datetime(df['Maturity'])
     
     return df
-
-    return pd.concat([first_term, crv], axis=0).reset_index(drop=True)
 
 
 def build_ind_termstructure(fut, **kwargs):
