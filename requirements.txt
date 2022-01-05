@@ -5,3 +5,4 @@ numpy
 bizdays
 lxml
 requests
+pyarrow
